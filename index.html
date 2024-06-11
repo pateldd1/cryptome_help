@@ -57,23 +57,24 @@
       font-weight: bold;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: background-color 0.3s;
-    }
-
-    .download-button:hover {
-      background-color: #005ba1;
-    }
-
-    .fixed-download-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
       z-index: 1000;
     }
 
+    .download-button:hover {
+      background-color: #005ba1;
+    }
+
     .img-small {
       width: 100%;
       max-width: 200px;
       margin: 10px;
+    }
+
+    .social-links a {
+      margin: 0 10px; /* Adjust the value to control spacing */
     }
 
     /* Additional CSS for mobile optimization */
@@ -102,6 +103,12 @@
     .navbar-dark .navbar-brand {
       color: #e0e0e0;
     }
+
+    .social-links {
+      margin-bottom: 80px;
+      /* Ensures space above the fixed download button */
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -128,8 +135,6 @@
   </nav>
 
   <div class="container mt-5">
-    <a href="https://apps.apple.com/us/app/cryptome/id1514994918"
-      class="download-button fixed-download-button mb-3">&#xF8FF; Download on the App Store</a>
     <h1 id="cryptome-help-page">CryptoMe Help Page</h1>
 
     <div class="content-section">
@@ -267,7 +272,6 @@
           equivalent USD. Then press the pay button to pay.</li>
       </ol>
     </div>
-
     <div class="content-section">
       <h2>Send XRP to 80+ other coins</h2>
       <div class="row">
@@ -337,8 +341,6 @@
       <h2>Contact Support</h2>
       <p>If you have any questions or need assistance, please contact us:</p>
       <p><strong>Email:</strong> <a href="mailto:support@justcryptome.com">support@justcryptome.com</a></p>
-      <a href="https://apps.apple.com/us/app/cryptome/id1514994918" class="download-button mb-3">&#xF8FF; Download on
-        the App Store</a>
       <div class="social-links">
         <a href="https://www.linkedin.com/company/cryptome1" target="_blank">
           <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"
@@ -358,6 +360,9 @@
         </a>
       </div>
     </div>
+
+    <a href="https://apps.apple.com/us/app/cryptome/id1514994918" class="download-button mb-3">&#xF8FF; Download on
+      the App Store</a>
   </div>
 
   <!-- Bootstrap JS, Popper.js, and jQuery -->
@@ -367,3 +372,5 @@
 </body>
 
 </html>
+
+                
