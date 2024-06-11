@@ -63,6 +63,13 @@
       background-color: #005ba1;
     }
 
+    .fixed-download-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
     .img-small {
       width: 100%;
       max-width: 200px;
@@ -121,8 +128,8 @@
   </nav>
 
   <div class="container mt-5">
-    <a href="https://apps.apple.com/us/app/cryptome/id1514994918" class="download-button mb-3">&#xF8FF; Download on the
-      App Store</a>
+    <a href="https://apps.apple.com/us/app/cryptome/id1514994918"
+      class="download-button fixed-download-button mb-3">&#xF8FF; Download on the App Store</a>
     <h1 id="cryptome-help-page">CryptoMe Help Page</h1>
 
     <div class="content-section">
@@ -202,8 +209,7 @@
         </div>
       </div>
       <ol class="mt-3">
-        <li>Press the coin's bank button to select the coin you want to deposit as XRP.</ <li>Press the coin's bank
-          button to select the coin you want to deposit as XRP.</li>
+        <li>Press the coin's bank button to select the coin you want to deposit as XRP.</li>
         <li>Receiving from Atom address and memo in case Changelly Deposit fails. It will get refunded back to this
           address and memo.</li>
         <li>Go to Coinbase or wherever you own Atom and deposit to this address.</li>
