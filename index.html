@@ -109,36 +109,57 @@
       /* Ensures space above the fixed download button */
       text-align: center;
     }
+
+    .navbar-nav {
+      margin-left: 0;
+    }
+
+    .dropdown-menu {
+      max-width: 100vw;
+      overflow: hidden;
+      word-wrap: break-word;
+    }
   </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <a class="navbar-brand" href="#">CryptoMe</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#cryptome-help-page">Home</a>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="demoDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Instructions
+          </a>
+          <div class="dropdown-menu" aria-labelledby="demoDropdown">
+            <a class="dropdown-item" href="#deposit-xrp">Depositing XRP</a>
+            <a class="dropdown-item" href="#deposit-other-to-xrp">Deposit XRP By Converting Other Crypto</a>
+            <a class="dropdown-item" href="#p2p">Send XRP to User (P2P transaction)</a>
+            <a class="dropdown-item" href="#send-xrp-address">Send to XRP Address</a>
+            <a class="dropdown-item" href="#withdraw-convert">Withdraw and Convert XRP</a>
+            <a class="dropdown-item" href="#view-transactions">Viewing Transactions</a>
+          </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#youtube-demo">Demo</a>
+          <a class="nav-link" href="#news">News and Promotions</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#support-section">Support</a>
+          <a class="nav-link" href="#contact">Contact Us</a>
         </li>
       </ul>
     </div>
   </nav>
 
   <div class="container mt-5">
-    <h1 id="cryptome-help-page">CryptoMe Help Page</h1>
+    <h1 id="cryptome-help-page">CryptoMe</h1>
 
     <div class="content-section">
-      <h2>Depositing XRP into your CryptoMe wallet</h2>
+      <h2 id="deposit-xrp">Depositing XRP into your CryptoMe wallet</h2>
       <h3>Create or import an XRP wallet to deposit XRP directly</h3>
       <div class="row">
         <div class="col-md-2 col-12">
@@ -168,7 +189,7 @@
         <li>After pressing the settings button, you'll see the options for removing your wallet or seeing your secret
           key. Press the small QR button to return to the QR page.</li>
       </ol>
-      <h3>Depositing other Cryptos as XRP into your CryptoMe Wallet</h3>
+      <h3 id="deposit-other-to-xrp">Depositing other Cryptos as XRP into your CryptoMe Wallet</h3>
       <div class="row">
         <div class="col-md-3 col-12">
           <img src="./images/changelly_deposit/coins.PNG" alt="coins" class="img-small">
@@ -232,7 +253,7 @@
     </div>
 
     <div class="content-section">
-      <h2>Send XRP to user</h2>
+      <h2 id="p2p">Send XRP to another CryptoMe User (P2P Transaction)</h2>
       <h3>Sending XRP or equivalent USD to another user</h3>
       <div class="row">
         <div class="col-md-4 col-12">
@@ -256,7 +277,7 @@
     </div>
 
     <div class="content-section">
-      <h2>Send to XRP Address</h2>
+      <h2 id="send-xrp-address">Send to XRP Address</h2>
       <h3>Sending XRP or equivalent USD to another XRP address</h3>
       <div class="row">
         <div class="col-md-6 col-12">
@@ -273,7 +294,7 @@
       </ol>
     </div>
     <div class="content-section">
-      <h2>Withdraw and Convert XRP to 150+ other cryptocurrencies</h2>
+      <h2 id="withdraw-convert">Withdraw and Convert XRP to 150+ other cryptocurrencies</h2>
       <div class="row">
         <div class="col-md-3 col-12">
           <img src="./images/changelly_send/search_solana.PNG" alt="Send to Address" class="img-small">
@@ -326,7 +347,7 @@
     </div>
 
     <div class="content-section">
-      <h2>Viewing Transactions</h2>
+      <h2 id="view-transactions">Viewing Transactions</h2>
       <div class="row">
         <div class="col-md-6 col-12">
           <img src="./images/view_transactions_1.png" alt="View transactions" class="img-small">
@@ -339,20 +360,37 @@
 
     <div class="support-section" id="support-section">
       <div class="support-section" id="support-section">
-        <h2>News</h2>
-        <p>Attention to All Professional Marketers: Currently, we are starting our journey and Looking to Pay a Marketing Team
-          to boost CryptoMe's following and get more daily active users.</p>
+        <h2 id="news">News</h2>
+        <p
+          style="background-color: #f8f9fa; border-left: 4px solid #007bff; padding: 15px; font-size: 18px; font-family: Arial, sans-serif; color: #333; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+          🎉 <strong>Win 400 XRP!</strong> 🎉<br>
+          Participate in our exciting raffle and stand a chance to win 400 XRP by September 1st, 2024! The more Peer-to-Peer
+          (P2P) transactions you make, the higher your chances of winning because each transaction counts as a ticket in the
+          raffle. 🎟️💸<br>
+          <em>Start transacting now and increase your chances to be the lucky winner!</em> 🤑💰
+        </p>
+
+        <p
+          style="background-color: #f8f9fa; border-left: 4px solid #007bff; padding: 15px; font-size: 18px; font-family: Arial, sans-serif; color: #333; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+          📢 <strong>Attention to All Professional Marketers:</strong> 📢<br>
+          Currently, we are starting our journey and looking to pay a marketing team to boost CryptoMe's following and get more
+          daily active users. 📈💼<br>
+          <em>Join us and help take CryptoMe to the next level!</em> 🚀
+        </p>
+
         <h2>Partners for Revenue Share</h2>
         <img src="./images/changelly-logo.jpg" alt="Changelly" style="width:200px;">
         <p></p>
         <p>Changelly is a cryptocurrency exchange that provides the best way to buy and sell 150+ cryptocurrencies. We
           are proud to partner with them to provide the best exchange rates for our users.</p>
-        <h2>Contact Us</h2>
+        <h2 id="contact">Contact Us</h2>
         <p>If you have any questions, need assistance with the app, or if you see a potential partnership, please contact us:
         </p>
         <p><strong>Support Email:</strong> <a href="mailto:support@justcryptome.com">support@justcryptome.com</a></p>
         <p><strong>Business/Partnership/Marketing Email:</strong> <a
             href="mailto:business@justcryptome.com">business@justcryptome.com</a></p>
+        <br>
+        <br>
         <div class="social-links">
           <a href="https://www.linkedin.com/company/cryptome1" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width:30px; height:30px;">
@@ -374,7 +412,7 @@
             <img src="./images/upwork.png" alt="Upwork" style="width:30px; height:30px;">
           </a>
         </div>
-      </div>
+    </div>
 
     <a href="https://apps.apple.com/us/app/cryptome/id1514994918" class="download-button mb-3">&#xF8FF; Download on
       the App Store</a>
