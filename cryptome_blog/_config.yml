@@ -21,10 +21,11 @@
 title: CryptoMe
 email: support@justcryptome.com
 description: >- 
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/blog" 
+  CryptoMe is a revolutionary platform that brings the ease and social connectivity of Venmo to the world of cryptocurrency. 
+  With CryptoMe, users can effortlessly deposit, send, and manage XRP and other cryptocurrencies. Our intuitive app offers seamless 
+  peer-to-peer transactions, ensuring quick and secure exchanges. Join us in transforming the future of digital payments with CryptoMe, 
+  where social interactions meet cutting-edge blockchain technology.
+baseurl: "" 
 url: "https://www.justcryptome.com"
 twitter_username: CryptoMeInc
 github_username: pateldd1
