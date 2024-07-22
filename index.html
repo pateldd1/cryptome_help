@@ -86,17 +86,30 @@
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-  
     body {
       font-family: 'Arial', sans-serif;
       background-color: #121212;
       color: #e0e0e0;
     }
-  
+
+    h1 {
+      font-family: 'Marker Felt', fantasy;
+      /* Custom font */
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, rgba(36, 36, 36, 1) 0%, rgba(72, 72, 72, 1) 35%, rgba(108, 108, 108, 1) 100%);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      font-size: 2.5em;
+    }
+
     h2,
     h3 {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Marker Felt', fantasy;
       /* Custom font */
       color: #ffffff;
       text-align: center;
@@ -108,43 +121,43 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
-  
+
     h3 {
       margin-top: 30px;
       margin-bottom: 15px;
       background: linear-gradient(90deg, rgba(36, 36, 36, 1) 0%, rgba(72, 72, 72, 1) 35%, rgba(108, 108, 108, 1) 100%);
     }
-  
+
     .navbar-dark .navbar-nav .nav-link,
     .navbar-dark .navbar-brand {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Marker Felt', fantasy;
       /* Custom font */
       color: #e0e0e0;
     }
-  
+
     .navbar-dark.bg-dark,
     .navbar-dark.bg-dark .navbar-toggler {
       background-color: #4169e1 !important;
       /* Royal blue */
     }
-  
+
     .content-section {
       margin-top: 20px;
     }
-  
+
     img {
       border-radius: 8px;
       max-width: 100%;
       height: auto;
     }
-  
+
     .support-section {
       margin-top: 50px;
       background-color: #333;
       padding: 20px;
       color: #e0e0e0;
     }
-  
+
     .download-button {
       display: inline-block;
       background-color: #0070c9;
@@ -161,21 +174,21 @@
       right: 20px;
       z-index: 1000;
     }
-  
+
     .download-button:hover {
       background-color: #005ba1;
     }
-  
+
     .img-small {
       width: 100%;
       max-width: 200px;
       margin: 10px;
     }
-  
+
     .social-links a {
       margin: 0 10px;
     }
-  
+
     @media (max-width: 768px) {
       .img-small {
         display: block;
@@ -184,31 +197,31 @@
         width: 80%;
         max-width: 200px;
       }
-  
+
       .content-section {
         text-align: center;
       }
-  
+
       .social-links img {
         margin: 10px;
       }
     }
-  
+
     .social-links {
       margin-bottom: 80px;
       text-align: center;
     }
-  
+
     .navbar-nav {
       margin-left: 0;
     }
-  
+
     .dropdown-menu {
       max-width: 100vw;
       overflow: hidden;
       word-wrap: break-word;
     }
-  
+
     .description {
       display: none;
       position: absolute;
@@ -220,14 +233,11 @@
       border-radius: 3px;
       font-size: 14px;
     }
-  
+
     .img-container:hover .description {
       display: block;
     }
   </style>
-
-
-
 </head>
 
 <body>
@@ -255,6 +265,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#news">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#partners">Partners</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact Us</a>
@@ -302,7 +315,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="content-section">
       <h2 id="deposit-other-to-xrp">Depositing other Cryptos as XRP into your CryptoMe Wallet (For Experienced Crypto
         Users)</h3>
@@ -519,7 +532,7 @@
           <em>Join us and help take CryptoMe to the next level!</em> 🚀
         </p>
 
-        <h2>Partners for Revenue Share</h2>
+        <h2 id="partners">Partners</h2>
         <img src="https://cryptome-website-assets.s3.amazonaws.com/images/changelly-logo.jpg" alt="Changelly"
           style="width:200px;">
         <p></p>
