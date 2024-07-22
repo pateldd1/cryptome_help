@@ -218,6 +218,13 @@ title: CryptoMe - The Global Venmo For Cryptocurrency
     .post a.read-more:hover {
       text-decoration: underline;
     }
+
+    .changelly-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
   </style>
 </head>
 
@@ -252,6 +259,9 @@ title: CryptoMe - The Global Venmo For Cryptocurrency
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#partners">Partners</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#fees">Fees</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact Us</a>
@@ -682,10 +692,13 @@ title: CryptoMe - The Global Venmo For Cryptocurrency
         </a>
       </div>
     </div>
-
+    <br>
+    <br>
+    <br>
+    <br>
     <h1>CryptoMe Learning Center</h1>
     <div class="content-section">
-      <h2 id="blog">Blog</h2>
+      <h2 id="blog">Blog Posts</h2>
       <div class="blog-posts">
         {% for post in site.posts %}
         <div class="post">
@@ -704,12 +717,12 @@ title: CryptoMe - The Global Venmo For Cryptocurrency
       <p
         style="background-color: #f8f9fa; border-left: 4px solid #007bff; padding: 15px; font-size: 18px; font-family: Arial, sans-serif; color: #333; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
         🎉 <strong>Win 400 XRP!</strong> 🎉<br>
-        Participate in our exciting raffle and stand a chance to win 400 XRP by September 1st, 2024! The more
+        Participate in our exciting raffle and stand a <strong>Chance to Win 400 XRP by September 1st, 2024</strong>! The more
         Peer-to-Peer
         (P2P) transactions you make, the higher your chances of winning because each transaction counts as a ticket in
         the
         raffle. 🎟️💸<br>
-        <em>Start transacting now and increase your chances to be the lucky winner!</em> 🤑💰
+        <em>Start transacting now and increase your chances to be our lucky winner!</em> 🤑💰
       </p>
 
       <p
@@ -721,19 +734,34 @@ title: CryptoMe - The Global Venmo For Cryptocurrency
       </p>
 
       <h2 id="partners">Partners</h2>
-      <img src="https://cryptome-website-assets.s3.amazonaws.com/images/changelly-logo.jpg" alt="Changelly"
-        style="width:200px;">
+      <div class="changelly-container" style="background-color: #333; color: #e0e0e0; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);">
+        <img src="https://cryptome-website-assets.s3.amazonaws.com/images/changelly_logo_2.jpg" alt="Changelly"
+          style="width:130px;">
+        <p></p>
+        <p style="text-align:center;">Changelly is a cryptocurrency exchange that provides the best and cheapest way to exchange between 150+ cryptocurrencies. We use Changelly to seamlessly allow users to pay each other and external wallets in other cryptocurrencies straight from their CryptoMe XRP wallet. We are also on a revenue-sharing model with their exchange, proudly announcing <strong>0.4% exchange rates</strong> for our users! We've made the exchange process so simple that it only requires <strong>1 Address Entry</strong> and that's all folks!</p>
+      </div>
       <p></p>
-      <p>Changelly is a cryptocurrency exchange that provides the best way to buy and sell 150+ cryptocurrencies. We are
-        proud to partner with them for our users to convert their XRP to other cryptocurrencies and receive revenue
-        share
-        with them.</p>
+      <h2 id="fees" style="text-align: center; margin-top: 30px;">Fee Structure</h2>
+      <div
+        style="background-color: #333; color: #e0e0e0; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);">
+        <ul style="list-style-type: none; padding: 0;">
+          <li style="margin-bottom: 10px; text-align: center;">
+            <strong>P2P Transactions:</strong> 0.05 XRP
+          </li>
+          <li style="margin-bottom: 10px; text-align: center;">
+            <strong>Withdraw to External XRP Addresses:</strong> 0.2 XRP
+          </li>
+          <li style="margin-bottom: 10px; text-align: center;">
+            <strong>Exchange between XRP and Other Cryptocurrencies:</strong> 0.4% of the exchange
+          </li>
+          <li style="margin-bottom: 10px; text-align: center;">
+            <strong>Deposits to CryptoMe XRP Wallet:</strong> Free
+          </li>
+        </ul>
+      </div>
       <h2 id="contact">Contact Us</h2>
-      <p>If you have any questions, need assistance with the app, or if you see a potential partnership, please contact
-        us:
-      </p>
-      <p><strong>Support Email:</strong> <a href="mailto:support@justcryptome.com">support@justcryptome.com</a></p>
-      <p><strong>Business/Partnership/Marketing Email:</strong> <a
+      <p style="text-align:center;"><strong>Support Email:</strong> <a href="mailto:support@justcryptome.com">support@justcryptome.com</a></p>
+      <p style="text-align:center;"><strong>Business Email:</strong> <a
           href="mailto:business@justcryptome.com">business@justcryptome.com</a></p>
       <br><br>
       <div class="social-links">
