@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /cart/
+Disallow: /support-section
+Allow: /
+
+Sitemap: https://www.justcryptome.com/sitemap.xml

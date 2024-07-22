@@ -1,8 +1,76 @@
----
-layout: default
----
-
 <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        article {
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #ffffff;
+            margin-top: 0;
+        }
+
+        p {
+            color: #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            border-top: 1px solid #333;
+            color: #bbb;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <article>
+            <!DOCTYPE html>
 <html lang="en">
   <head>
   <!-- Google tag (gtag.js) -->
@@ -758,15 +826,31 @@ layout: default
     <div class="content-section">
       <h2 id="blog">Blog</h2>
       <div class="blog-posts">
-        {% for post in site.posts %}
+        
         <div class="post">
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <p><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
-          <p>{{ post.excerpt }}</p>
-          <a href="{{ post.url }}">Read more</a>
+          <h3><a href="/cryptome_blog/2024/07/22/future-of-payments.html">Embracing the Future of Payments with CryptoMe</a></h3>
+          <p><small>July 22, 2024</small></p>
+          <p>Join us as we delve into how CryptoMe is pioneering a new frontier in social cryptocurrency payments, combining innovation with user-centric design.</p>
+          <a href="/cryptome_blog/2024/07/22/future-of-payments.html">Read more</a>
         </div>
         <hr>
-        {% endfor %}
+        
+        <div class="post">
+          <h3><a href="/cryptome_blog/2024/07/22/social-payments.html">CryptoMe: The Global Venmo for Cryptocurrency</a></h3>
+          <p><small>July 22, 2024</small></p>
+          <p>Explore how CryptoMe is setting the standard for social cryptocurrency payments, enabling users to connect and transact globally.</p>
+          <a href="/cryptome_blog/2024/07/22/social-payments.html">Read more</a>
+        </div>
+        <hr>
+        
+        <div class="post">
+          <h3><a href="/cryptome_blog/2024/07/22/welcome-to-cryptome.html">Revolutionizing Social Crypto Payments with CryptoMe</a></h3>
+          <p><small>July 22, 2024</small></p>
+          <p>Discover how CryptoMe is transforming the world of cryptocurrency payments by combining social interactions with seamless transactions.</p>
+          <a href="/cryptome_blog/2024/07/22/welcome-to-cryptome.html">Read more</a>
+        </div>
+        <hr>
+        
       </div>
     </div>
 
@@ -839,6 +923,16 @@ layout: default
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+        </article>
+    </div>
+
+    <footer>
+        &copy; 2024 CryptoMe. All rights reserved.
+    </footer>
+
 </body>
 
 </html>
