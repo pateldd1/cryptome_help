@@ -148,9 +148,12 @@
 
 <head>
   <!-- Bootstrap CSS -->
+<!-- Preload scripts and styles -->
   <link rel="preload" href="https://code.jquery.com/jquery-3.5.1.slim.min.js" as="script">
   <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" as="script">
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" as="script">
+  <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" as="style">
+  <link rel="preload" href="https://cryptome-website-assets.s3.amazonaws.com/images/wallet/create_or_import_1.png" as="image">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
@@ -429,7 +432,9 @@
           <div class="carousel-item active">
             <img class="d-block w-100 carousel-img"
               src="https://cryptome-website-assets.s3.amazonaws.com/images/wallet/create_or_import_1.png"
-              alt="Create or import wallet">
+              alt="Create or import wallet"
+              width="800" height="600"
+              loading="lazy">
             <div class="carousel-caption d-md-block">
               <p>Press to create or import a wallet. Importing a wallet requires your XRP secret key.</p>
             </div>
