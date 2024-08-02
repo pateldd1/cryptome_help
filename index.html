@@ -297,6 +297,29 @@ title: CryptoMe - The Global Venmo For Cryptocurrency
     .ticket-info li {
       margin-bottom: 10px;
     }
+
+    #leaderboard-loading {
+      text-align: center;
+      font-size: 1.5em;
+      margin: 20px 0;
+      color: #ffffff;
+    }
+
+    #leaderboard-list {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    #leaderboard-list li {
+      background-color: #333;
+      color: #e0e0e0;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
   </style>
 </head>
 
@@ -855,6 +878,7 @@ title: CryptoMe - The Global Venmo For Cryptocurrency
     <div class="container">
       <div class="leaderboard">
         <h2 id="raffle">400 XRP Raffle Leaderboard</h2>
+        <div id="leaderboard-loading">Loading...</div>
         <ul id="leaderboard-list"></ul>
       </div>
       <div class="ticket-info">
@@ -960,6 +984,9 @@ title: CryptoMe - The Global Venmo For Cryptocurrency
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+      var loadingMessage = document.getElementById('leaderboard-loading');
+      loadingMessage.style.display = 'block'; // Show loading message
+
       fetch('https://cryptome.devpatel.net/v1/getAllUserTickets')
         .then(response => response.json())
         .then(data => {
@@ -969,10 +996,12 @@ title: CryptoMe - The Global Venmo For Cryptocurrency
             var listItem = document.createElement('li');
             listItem.innerHTML = `<span>${index + 1}</span> <span class="ticket-badge">${tickets} 🎟️</span>`;
             leaderboardList.appendChild(listItem);
+            loadingMessage.style.display = 'none'; 
           });
         })
         .catch(err => {
           console.error('Error fetching leaderboard data:', err);
+          loadingMessage.innerHTML = 'Error loading data'; // Show error message
         });
     });
   </script>
