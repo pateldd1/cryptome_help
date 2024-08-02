@@ -231,6 +231,72 @@ title: CryptoMe - The Global Venmo For Cryptocurrency
       flex-direction: column;
       align-items: center;
     }
+
+    .leaderboard {
+      margin-top: 50px;
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      color: #e0e0e0;
+    }
+
+    .leaderboard h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      color: #ffffff;
+      background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .leaderboard ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .leaderboard li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #2e2e2e;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      font-size: 1.2em;
+    }
+
+    .leaderboard li:nth-child(odd) {
+      background-color: #3e3e3e;
+    }
+
+    .ticket-badge {
+      background-color: #4169e1;
+      color: #ffffff;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .ticket-info {
+      margin-top: 20px;
+      background-color: #2e2e2e;
+      padding: 15px;
+      border-radius: 8px;
+      color: #ffffff;
+      font-size: 1.2em;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .ticket-info ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .ticket-info li {
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 
@@ -259,6 +325,9 @@ title: CryptoMe - The Global Venmo For Cryptocurrency
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#raffle">Raffle</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#news">News</a>
@@ -783,6 +852,22 @@ title: CryptoMe - The Global Venmo For Cryptocurrency
       </div>
     </div>
 
+    <div class="container">
+      <div class="leaderboard">
+        <h2 id="raffle">400 XRP Raffle Leaderboard</h2>
+        <ul id="leaderboard-list"></ul>
+      </div>
+      <div class="ticket-info">
+        <h2>How to Earn Tickets</h2>
+        <ul>
+          <li>Sign up: 1 🎟️</li>
+          <li>Create an XRP wallet: 2 🎟️</li>
+          <li>Create a profile picture: 3 🎟️</li>
+          <li>Each P2P transaction: 5 🎟️</li>
+        </ul>
+      </div>
+    </div>
+
     <div class="support-section" id="support-section">
       <h2 id="news">News</h2>
       <p
@@ -873,6 +958,24 @@ title: CryptoMe - The Global Venmo For Cryptocurrency
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('https://cryptome.devpatel.net/v1/getAllUserTickets')
+        .then(response => response.json())
+        .then(data => {
+          var leaderboardList = document.getElementById('leaderboard-list');
+          leaderboardList.innerHTML = '';
+          data.forEach(function (tickets, index) {
+            var listItem = document.createElement('li');
+            listItem.innerHTML = `<span>${index + 1}</span> <span class="ticket-badge">${tickets} 🎟️</span>`;
+            leaderboardList.appendChild(listItem);
+          });
+        })
+        .catch(err => {
+          console.error('Error fetching leaderboard data:', err);
+        });
+    });
+  </script>
 </body>
 
 </html>
