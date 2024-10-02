@@ -1159,7 +1159,7 @@
       var loadingMessage = document.getElementById('leaderboard-loading');
       loadingMessage.style.display = 'block'; // Show loading message
 
-      fetch('https://cryptome.devpatel.net/v1/getAllUserTickets')
+      fetch('https://api.justcryptome.com/v1/getAllUserTickets')
         .then(response => response.json())
         .then(data => {
           var leaderboardList = document.getElementById('leaderboard-list');
